@@ -12,13 +12,13 @@
         body {
             margin: 0;
             height: 100%;
-      
+
         }
 
         ul {
             list-style: none;
         }
-    
+
         .default-padding {
             padding: 10px 25px;
         }
@@ -26,27 +26,27 @@
         .container {
             max-width: 1500px;
             margin-inline: auto;
-   
+
         }
 
         .movie-cards {
             display: grid;
-            grid-template-columns:  repeat(auto-fit, minmax(190px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
             align-content: center;
             gap: 2rem 1rem;
-  
+
         }
 
         .movie-card {
             cursor: pointer;
             transition: scale .4s;
-            box-shadow: -2px 8px 16px 0px rgba(0,0,0,0.78);
-            -webkit-box-shadow: -2px 8px 16px 0px rgba(0,0,0,0.78);
-            -moz-box-shadow: -2px 8px 16px 0px rgba(0,0,0,0.78);
+            box-shadow: -2px 8px 16px 0px rgba(0, 0, 0, 0.78);
+            -webkit-box-shadow: -2px 8px 16px 0px rgba(0, 0, 0, 0.78);
+            -moz-box-shadow: -2px 8px 16px 0px rgba(0, 0, 0, 0.78);
         }
 
         .movie-card:hover {
-           scale: 1.1;
+            scale: 1.1;
         }
 
         .movie-poster {
@@ -62,23 +62,34 @@
         .menu {
             display: flex;
             justify-content: flex-end;
-            
+
         }
 
         .menu li {
             margin: 0 30px;
         }
-        
+
         .movie-meta {
-            /* padding: .3rem; */
-            display: none;
+            text-align: center;
+            height: 40px;
+            padding: 0.6rem 0.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .movie-meta-title {
-            font-size: 1.2em;
-            padding-top: .7rem;
+            font-size: 1em;
+            font-weight:bold;
+            /* padding-top: .7rem; */
         }
 
+        .hover-box {
+            width: 500px;
+            -webkit-box-shadow: 5px 14px 20px 8px rgba(0, 0, 0, 0.78);
+            background-color: #000000;
+            position: absolute;
+        }
     </style>
 </head>
 
@@ -298,6 +309,42 @@
             </div>
         </div>
     </section>
+
+
+    <div id="hover-box" class="hover-box">
+        <div class="hover-box-card" style="display: flex;">
+            <div class="hover-box-poster">
+                <img src="assets/images/demonslayer.jpg" style="width: 189px;" alt="Demon Slayer">
+            </div>
+            <div class="" style="margin-left: 20px;">
+                <div style="color: #fff; font-size: 26px;" class="movie-meta-title movie-font">Demon Slayer</div>
+                <p class="movie-font" style="color: #fff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Pariatur vitae explicabo dolorum illum nulla tempora at fuga vero quas eos? Recusandae rem animi
+                    repudiandae iste incidunt voluptas fugit quaerat nemo!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let hoverBox = document.getElementById("hover-box");
+
+        document.querySelectorAll('.movie-card').forEach(item => {
+            item.addEventListener('mouseover', event => {
+                let x = event.target.getBoundingClientRect().left;
+                let y = event.target.getBoundingClientRect().top;
+
+                console.log(x, y);
+
+                // hoverBox.style.top = (y + window.scrollY) + 'px';
+                // hoverBox.style.left = x + 'px';
+            })
+        });
+
+
+
+        
+    </script>
 
 </body>
 
