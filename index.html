@@ -40,9 +40,12 @@
         .movie-card {
             cursor: pointer;
             transition: scale .4s;
+            position: relative;
             box-shadow: -2px 8px 16px 0px rgba(0, 0, 0, 0.78);
             -webkit-box-shadow: -2px 8px 16px 0px rgba(0, 0, 0, 0.78);
             -moz-box-shadow: -2px 8px 16px 0px rgba(0, 0, 0, 0.78);
+            z-index: 2;
+            position: relative;
         }
 
         .movie-card:hover {
@@ -71,13 +74,17 @@
 
         .movie-meta {
             text-align: center;
-            height: 40px;
-            padding: 0.6rem 0.3rem;
-            display: flex;
+            height: 60px;
+            padding: 0rem 1rem;
+            display: none;
             justify-content: center;
             align-items: center;
-            background: #061933;
+            background: #000000d6;
             color: #ffffff;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+         
         }
 
         .movie-meta-title {
@@ -89,9 +96,13 @@
         .hover-box {
             display: none;
             width: 500px;
-            -webkit-box-shadow: 5px 14px 20px 8px rgba(0, 0, 0, 0.78);
+            /* -webkit-box-shadow: 5px 14px 20px 8px rgba(0, 0, 0, 0.78); */
             background-color: #000000;
             position: absolute;
+        }
+
+        .show {
+            display: flex;
         }
     </style>
 </head>
@@ -116,200 +127,7 @@
             <header class="default-padding">
                 <h1 class="movie-font">Latest Movies</h1>
             </header>
-            <div class="movie-cards default-padding">
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/demonslayer.jpg" alt="Demon Slayer">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Demon Slayer</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/attackoftitan2.jpg" alt="Attack of Titan">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Attack of Titan</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/transformers.jpg" alt="Transformers: Rise of the Beasts">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Transformers: Rise of the Beasts</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/demonslayer.jpg" alt="Demon Slayer">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Demon Slayer</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/attackoftitan2.jpg" alt="Attack of Titan">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Attack of Titan</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/transformers.jpg" alt="Transformers: Rise of the Beasts">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Transformers: Rise of the Beasts</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/demonslayer.jpg" alt="Demon Slayer">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Demon Slayer</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/attackoftitan2.jpg" alt="Attack of Titan">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Attack of Titan</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/transformers.jpg" alt="Transformers: Rise of the Beasts">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Transformers: Rise of the Beasts</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/demonslayer.jpg" alt="Demon Slayer">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Demon Slayer</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/attackoftitan2.jpg" alt="Attack of Titan">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Attack of Titan</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/transformers.jpg" alt="Transformers: Rise of the Beasts">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Transformers: Rise of the Beasts</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/demonslayer.jpg" alt="Demon Slayer">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Demon Slayer</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/attackoftitan2.jpg" alt="Attack of Titan">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Attack of Titan</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/transformers.jpg" alt="Transformers: Rise of the Beasts">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Transformers: Rise of the Beasts</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/demonslayer.jpg" alt="Demon Slayer">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Demon Slayer</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/attackoftitan2.jpg" alt="Attack of Titan">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Attack of Titan</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/transformers.jpg" alt="Transformers: Rise of the Beasts">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Transformers: Rise of the Beasts</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/demonslayer.jpg" alt="Demon Slayer">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Demon Slayer</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/attackoftitan2.jpg" alt="Attack of Titan">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Attack of Titan</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/transformers.jpg" alt="Transformers: Rise of the Beasts">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Transformers: Rise of the Beasts</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/demonslayer.jpg" alt="Demon Slayer">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Demon Slayer</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/attackoftitan2.jpg" alt="Attack of Titan">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Attack of Titan</div>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <div class="movie-poster">
-                        <img src="assets/images/transformers.jpg" alt="Transformers: Rise of the Beasts">
-                    </div>
-                    <div class="movie-meta">
-                        <div class="movie-meta-title movie-font">Transformers: Rise of the Beasts</div>
-                    </div>
-                </div>
-            </div>
+            <div class="movie-cards default-padding"></div>
         </div>
     </section>
 
@@ -331,20 +149,59 @@
 
     <script>
         let hoverBox = document.getElementById("hover-box");
+     
+        // document.querySelectorAll('.movie-card').forEach(item => {
+        //     item.addEventListener('mouseenter', event => {
+        //         // let x = event.target.getBoundingClientRect().left;
+        //         // let y = event.target.getBoundingClientRect().top;
 
-        document.querySelectorAll('.movie-card').forEach(item => {
-            item.addEventListener('mouseover', event => {
-                let x = event.target.getBoundingClientRect().left;
-                let y = event.target.getBoundingClientRect().top;
+        //         // console.log(x, y);
 
-                console.log(x, y);
+        //         // hoverBox.style.top = (y + window.scrollY) + 'px';
+        //         // hoverBox.style.left = x + 'px';
 
-                // hoverBox.style.top = (y + window.scrollY) + 'px';
-                // hoverBox.style.left = x + 'px';
-            })
+        //         console.log('aaa')
+        //     })
+        // });
+
+        document.body.addEventListener( 'mouseover', function ( event ) {
+            if( event.target.className == 'movie-poster-image' ) {
+                event.target.parentNode.parentNode.querySelector('.movie-meta').classList.add('show')
+            } 
+        });
+
+        document.body.addEventListener( 'mouseout', function ( event ) {
+            console.log('out', event.target.className)
+            if( event.target.className == 'movie-poster-image' ) {
+                event.target.parentNode.parentNode.querySelector('.movie-meta').classList.remove('show')
+            } 
         });
 
 
+        async function loadMovies() {
+            const response = await fetch("movies.json");
+            const movies = await response.json();
+           
+            let movieCards = document.querySelector('.movie-cards');
+
+            movies.forEach((v, k) => {
+
+                let template = `
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <img class="movie-poster-image" src="assets/images/${v.image}" alt="${v.title}">
+                        </div>
+                        <div class="movie-meta">
+                            <div class="movie-meta-title movie-font">${v.title}</div>
+                        </div>
+                    </div>
+                `;
+
+                movieCards.innerHTML += template;
+            })
+        }
+
+        loadMovies();
 
         
     </script>
